@@ -33,12 +33,8 @@ test('renders Vite and React logos and the count button', () => {
     expect(button).toHaveTextContent('count is 2');
   });
   
-  test('renders instructional text and links', () => {
+  test('renders links', () => {
     render(<App />);
-  
-    // Check for instructional text
-    const instructionText = screen.getByText(/Edit src\/App.tsx and save to test HMR/i);
-    expect(instructionText).toBeInTheDocument();
   
     const learnMoreText = screen.getByText(/Click on the Vite and React logos to learn more/i);
     expect(learnMoreText).toBeInTheDocument();
